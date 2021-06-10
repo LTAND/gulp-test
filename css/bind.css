@@ -1,0 +1,123 @@
+.box {
+  width: 100%;
+  height: 100vh;
+  background-color: #fa6b1d;
+  text-align: center;
+  padding-top: 4.75rem; }
+
+.box .logo {
+  background-color: #fa6b1d;
+  margin: 0 auto 60px;
+  width: 10.85rem;
+  height: 7.5rem; }
+
+.box .formbox {
+  margin: 0 auto;
+  padding: 4.45rem 2.75rem 5.7rem 2.75rem;
+  width: 29rem;
+  height: 37.5rem;
+  background-color: #fff;
+  border-radius: .7rem;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #9b9ba2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-line-pack: distribute;
+  align-content: space-around; }
+
+.box .formbox .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 2rem;
+  line-height: 2rem; }
+
+.box .formbox .top .point {
+  margin: 0rem .5rem;
+  display: inline-block;
+  width: .35rem;
+  height: .35rem;
+  line-height: 2rem;
+  background: #333333;
+  border-radius: 50%;
+  vertical-align: middle; }
+
+.box .formbox .linebox {
+  margin: 1rem 0rem;
+  padding: 2.5rem 2.25rem 2.5rem 2.25rem;
+  width: 24.25rem;
+  height: 2rem;
+  line-height: 1rem;
+  border: .1rem solid #9b9ba2;
+  border-radius: 4rem;
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative; }
+
+.box .formbox .linebox input {
+  margin-left: .5rem;
+  padding: .5rem .5rem;
+  width: 20rem;
+  border: 0rem;
+  outline: none; }
+
+.box .formbox .linebox input.codeinput {
+  width: 10rem; }
+
+.box .formbox .linebox .txt.txt1 {
+  width: 1.4rem;
+  height: 1.6rem;
+  background: url("http://cdn.hanzigon.cn/common/png/277ba8d429ed7cb7c01cdbfe683e5643.png");
+  background-size: 100% 100%; }
+
+.box .formbox .linebox .txt.txt2 {
+  width: 1.25rem;
+  height: 1.5rem;
+  background: url("http://cdn.hanzigon.cn/common/png/cbe887da0115f6fc9e19c492027990d1.png");
+  background-size: 100% 100%; }
+
+.box .formbox .linebox .txt.txt3 {
+  width: 1.45rem;
+  height: 1.6rem;
+  background: url("http://cdn.hanzigon.cn/common/png/ca44e1c14df565f2b4f051cdd350c437.png");
+  background-size: 100% 100%; }
+
+.box .formbox .linebox .getcode {
+  width: 10rem;
+  text-align: center;
+  border-left: .05rem solid #e0dfe5; }
+
+.box .formbox .linebox .discode {
+  width: 10rem;
+  text-align: center;
+  border-left: .05rem solid #e0dfe5; }
+
+.box .formbox .btn {
+  width: 22.5rem;
+  margin: 2.8rem auto;
+  height: 4rem;
+  line-height: 1rem;
+  background: #00acec;
+  border-radius: 2rem;
+  text-align: center;
+  font-size: 2.2rem;
+  color: #ffffff; }

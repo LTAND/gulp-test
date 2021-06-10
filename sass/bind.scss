@@ -1,0 +1,132 @@
+// node-sass -wr scss -o css
+
+$designWidth: 750;
+
+@function remVal($px) {
+  @if unitless($px) {
+    @return $px * $designWidth / $designWidth / 20 + rem;
+  } @else {
+    @return $px;
+  }
+}
+@function px2rem($values) {
+  $list: ();
+  @each $value in $values {
+    @if (type-of($value) == "number") {
+      $list: append($list, remVal($value));
+    }
+  }
+  @return $list();
+}
+
+.box {
+  width: 100%;
+  height: 100vh;
+  background-color: #fa6b1d;
+  text-align: center;
+  padding-top: px2rem(95);
+  .logo {
+    background-color: #fa6b1d;
+    margin: 0 auto 60px;
+    width: px2rem(217);
+    height: px2rem(150);
+  }
+  .formbox {
+    margin:0 auto;
+    padding: px2rem(89) px2rem(55) px2rem(114) px2rem(55);
+    width: px2rem(580);
+    height: px2rem(750);
+    background-color: #fff;
+    border-radius: px2rem(14);
+    font-size: px2rem(24);
+    text-align: center;
+    color: #9b9ba2;
+
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: px2rem(40);
+      line-height: px2rem(40);
+      .point {
+        margin: px2rem(0) px2rem(10);
+        display: inline-block;
+        width: px2rem(7);
+        height: px2rem(7);
+        line-height: px2rem(40);
+        background: #333333;
+        border-radius: 50%;
+        vertical-align: middle;
+      }
+    }
+    .linebox {
+      margin: px2rem(20) px2rem(0);
+      padding: px2rem(50) px2rem(45) px2rem(50) px2rem(45);
+      width: px2rem(485);
+      height: px2rem(40);
+      line-height: px2rem(20);
+      border: px2rem(2) solid #9b9ba2;
+      border-radius: px2rem(80);
+      text-align: left;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      position: relative;
+      input {
+        margin-left: px2rem(10);
+        padding: px2rem(10) px2rem(10);
+        width: px2rem(400);
+	      border: px2rem(0);
+        outline:none;
+        &.codeinput {
+        width: px2rem(200);
+      }
+      }
+      .txt {
+        &.txt1 {
+          width: px2rem(28);
+          height: px2rem(32);
+          background: url("http://cdn.hanzigon.cn/common/png/277ba8d429ed7cb7c01cdbfe683e5643.png");
+          background-size: 100% 100%;
+        }
+        &.txt2 {
+          width: px2rem(25);
+          height: px2rem(30);
+          background: url("http://cdn.hanzigon.cn/common/png/cbe887da0115f6fc9e19c492027990d1.png");
+          background-size: 100% 100%;
+        }
+        &.txt3 {
+          width: px2rem(29);
+          height: px2rem(32);
+          background: url("http://cdn.hanzigon.cn/common/png/ca44e1c14df565f2b4f051cdd350c437.png");
+          background-size: 100% 100%;
+        }
+      }
+      .getcode {
+        width: px2rem(200);
+        text-align: center;
+        border-left: px2rem(1) solid #e0dfe5;
+      }
+      .discode {
+        width: px2rem(200);
+        text-align: center;
+        border-left: px2rem(1) solid #e0dfe5;
+      }
+    }
+    .btn {
+      width: px2rem(450);
+      margin: px2rem(56) auto;
+      height: px2rem(80);
+      line-height: px2rem(20);
+      background: #00acec;
+      border-radius: px2rem(40);
+      text-align: center;
+      font-size: px2rem(44);
+      color: #ffffff;
+    }
+  }
+}

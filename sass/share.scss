@@ -1,0 +1,111 @@
+// node-sass -wr scss -o css
+
+$designWidth: 750;
+
+@function remVal($px) {
+  @if unitless($px) {
+    @return $px * $designWidth / $designWidth / 20 + rem;
+  } @else {
+    @return $px;
+  }
+}
+@function px2rem($values) {
+  $list: ();
+  @each $value in $values {
+    @if (type-of($value) == "number") {
+      $list: append($list, remVal($value));
+    }
+  }
+  @return $list();
+}
+.box {
+  width: 100%;
+  height: 100%;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+.bg {
+  position: relative;
+  width: px2rem(750);
+}
+.packet-wrapper {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 2;
+
+  .packet-content {
+    margin: auto;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    .packet-open {
+      position: relative;
+      width: px2rem(675);
+      height: px2rem(765);
+      .btn {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        bottom: 20%;
+        left: 52%;
+        text-align: center;
+        width: px2rem(242);
+        height: px2rem(66);
+        background: linear-gradient(0deg, #ebb36e, #ffe5c6);
+        border-radius: px2rem(32) px2rem(32) px2rem(32) px2rem(32);
+        font-size: px2rem(48);
+        font-family: PingFang SC;
+        font-weight: 800;
+        color: #f03838;
+        margin: auto;
+      }
+      .desc {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        bottom: 0%;
+        left: 53%;
+        margin: auto;
+        width: px2rem(530);
+        height: px2rem(84);
+        font-size: px2rem(31);
+        text-align: center;
+        font-family: PingFang SC;
+        font-weight: bold;
+        color: #fffefe;
+      }
+    }
+    .packet-close {
+      position: relative;
+      width: px2rem(550);
+      height: px2rem(765);
+    }
+    .iconfont {
+      font-size: px2rem(36);
+      font-weight: 500;
+    }
+  }
+}
+.btn-wrapper {
+  padding: px2rem(2);
+  background: #f16d00;
+  .bind-btn {
+    margin: auto;
+    text-align: center;
+    width: px2rem(200);
+    height: px2rem(75);
+    line-height: px2rem(75);
+    color: #fff;
+    font-size: px2rem(36);
+    font-weight: 200;
+    border-radius: px2rem(40);
+    font-family: "微软雅黑";
+    background: #01799c;
+    margin-bottom: px2rem(15);
+  }
+}
